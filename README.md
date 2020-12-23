@@ -1,12 +1,12 @@
-![videq](http://s3.amazonaws.com/challengepost/photos/production/solution_photos/000/203/847/datas/xlarge.png "videq - High quality video encoding for modern web in golang")
+![videoConverter](http://s3.amazonaws.com/challengepost/photos/production/solution_photos/000/203/847/datas/xlarge.png "videoConverter - High quality video encoding for modern web in golang")
 
-# videq
+# videoConverter
 High quality video encoding for modern web in golang
 
 **Project links and final notes**
-   * compo submission page http://gopher-gala.challengepost.com/submissions/31979-videq
-   * repo https://github.com/gophergala/videq/
-   * demo http://videq.nivas.hr:8080/
+   * compo submission page http://gopher-gala.challengepost.com/submissions/31979-videoConverter
+   * repo https://github.com/gophergala/videoConverter/
+   * demo http://videoConverter.nivas.hr:8080/
      - limitations
        - demo is limited to max 5 min videos and 50 gb of user uploaded data
        - each user can upload only 1 video, after it is encoded or aborted, user can upload new one
@@ -38,7 +38,7 @@ Video encoding is done in queue with help of go workers. First we double pass en
 
 **How to use**
 *   Download and compile
-    go get -u -v https://github.com/gophergala/videq
+    go get -u -v https://github.com/gophergala/videoConverter
 *   create config file
 File has to be present in ./conf/ folder and named eg: ubuntu.config.ini, where ubuntu is the name of server on which it is being run. you get it with uname -n
 ```
@@ -48,7 +48,7 @@ LISTENADDRESS = ":8080"
 
 [db]
 HOST="localhost"
-NAME="videq"
+NAME="videoConverter"
 USER="root"
 PASS="XXX"
 DEBUG=false
@@ -57,9 +57,9 @@ DEBUG=false
 *   create and import empty database 
 ```
 mysql -u root -p < sql/create_db.sql
-mysql -u root -p videq < sql/empty_db.sql
+mysql -u root -p videoConverter < sql/empty_db.sql
 ```
-*   run by starting ./start_videq.sh
+*   run by starting ./start_videoConverter.sh
 *   goto http://localhost:8080/
 
 
@@ -93,7 +93,7 @@ We are new in golang and  we used this hackaton to learn more about:
 - team workflow on short deadline golang projects
 
 
-## What's next for videq
+## What's next for videoConverter
 - more encoding options for quality
 - graceful restart
 - scalable (multi server workers) … if we manage in that short time we have… 
@@ -103,7 +103,7 @@ We are new in golang and  we used this hackaton to learn more about:
 - ...
 
 ## The Team
-Big shout to fine http://nivas.hr Videq team members:
+Big shout to fine http://nivas.hr videoConverter team members:
 - https://github.com/guycalledseven backend
 - https://github.com/MatejB backend
 - https://github.com/luzel frontend
